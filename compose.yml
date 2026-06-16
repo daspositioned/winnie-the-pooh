@@ -1,0 +1,8 @@
+services:
+  bot:
+    image: ghcr.io/daspositioned/honeypot:latest
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - "./logs/:/app/logs/"
