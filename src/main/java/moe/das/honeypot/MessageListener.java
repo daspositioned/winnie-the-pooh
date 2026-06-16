@@ -55,8 +55,8 @@ public class MessageListener extends ListenerAdapter {
                 .setTitle("Honeypot triggered")
                 .setColor(config.embedColor())
                 .setDescription(String.format(
-                        "%s (%s, ID %d) triggered honeypot and was soft-banned",
-                        user.getAsMention(), user.getName(), user.getIdLong()
+                        "%s (%s) triggered honeypot and was soft-banned",
+                        user.getAsMention(), user.getName()
                 ))
                 .build()).queue();
     }
