@@ -54,7 +54,10 @@ public class MessageListener extends ListenerAdapter {
         channel.sendMessageEmbeds(new EmbedBuilder()
                 .setTitle("Honeypot triggered")
                 .setColor(config.embedColor())
-                .setDescription(String.format("User %s (%d) triggered honeypot and was soft-banned", user.getName(), user.getIdLong()))
+                .setDescription(String.format(
+                        "%s (%s, ID %d) triggered honeypot and was soft-banned",
+                        user.getAsMention(), user.getName(), user.getIdLong()
+                ))
                 .build()).queue();
     }
 }
